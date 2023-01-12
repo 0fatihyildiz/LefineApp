@@ -2,19 +2,7 @@
 
 Web application for stream and view videos with ur friends.
 
-## Technologies
-
-Here are the following technologies that has been used:
-
-- TypeScript
-- Vue + Vite
-- Vue Router
-- TailwindCSS
-- Headless UI
-- Pinia
-- Storybook
-
-## Project Structure
+## Folder Structure
 
 ```sh
 ├── src/
@@ -22,11 +10,17 @@ Here are the following technologies that has been used:
 │   ├── components # Reusable components
 │   ├── router  # Vue Router configuration
 │   ├── stores # Pinia stores
+│   ├── types # Pinia stores
+│   ├── utils # Pinia stores
 │   └── views # Pages
+│       └── auth
+│          └── store
+│          └── router
+│          └── compositions/composables
+│          └── types
+│       └── dashboard
 └── main.ts # Project entry point
 ```
-
-### Folder Structure
 
 ## Project Setup
 
@@ -40,38 +34,28 @@ yarn install
 yarn dev
 ```
 
+### Run Tests On Watch Mode
+
+```sh
+yarn test
+```
+
 ### Type-Check, Compile and Minify for Production
 
 ```sh
 yarn build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-yarn test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-yarn test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-yarn build
-yarn test:e2e
-```
-
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 yarn lint
+```
+
+### Format with [Prettier](https://prettier.io/)
+
+```sh
+yarn format
 ```
 
 <!-- # Lefine
