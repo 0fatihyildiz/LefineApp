@@ -30,7 +30,7 @@ input[type='checkbox']:checked {
 }
 
 input[type='radio'] {
-  @apply rounded-full;
+  @apply rounded-ful;
 }
 
 label {

@@ -1,5 +1,10 @@
 <template>
-  <button ref="button" :class="['button', size, type]" :disabled="disabled">
+  <button
+    ref="button"
+    :class="['button', size, variant]"
+    :disabled="disabled"
+    :type="type as any"
+  >
     <loadingApp :size="size" v-if="loading" />
     <slot v-else />
   </button>
@@ -13,7 +18,8 @@ const loading = ref(false);
 
 const props = defineProps({
   size: { type: String, default: 'md' },
-  type: { type: String, default: 'primary' },
+  type: { type: String, default: 'button' },
+  variant: { type: String, default: 'primary' },
   disabled: { type: Boolean, default: false },
 });
 
