@@ -42,40 +42,40 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 import {
   ExclamationCircleIcon,
   EyeIcon,
   EyeSlashIcon,
-} from "@heroicons/vue/20/solid";
+} from '@heroicons/vue/20/solid';
 
 const props = defineProps({
-  label: { type: String, default: "" },
-  type: { type: String, default: "text" },
-  placeholder: { type: String, default: "" },
+  label: { type: String, default: '' },
+  type: { type: String, default: 'text' },
+  placeholder: { type: String, default: '' },
   disabled: { type: Boolean, default: false },
-  hint: { type: String, default: "" },
-  help: { type: String, default: "" },
-  error: { type: String, default: "" },
+  hint: { type: String, default: '' },
+  help: { type: String, default: '' },
+  error: { type: String, default: '' },
   name: { type: String, required: true },
   icon: Object,
   modelValue: String,
 });
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue']);
 
 const passwordShow = ref(false);
 const type = ref(props.type);
 
 const togglePassword = () => {
-  if (props.type === "password") {
+  if (props.type === 'password') {
     passwordShow.value = !passwordShow.value;
-    type.value = passwordShow.value ? "text" : "password";
+    type.value = passwordShow.value ? 'text' : 'password';
   }
 };
 
 const updateValue = (event: Event) =>
-  emit("update:modelValue", (event.target as HTMLInputElement).value);
+  emit('update:modelValue', (event.target as HTMLInputElement).value);
 </script>
 
 <style lang="postcss" scoped>

@@ -11,14 +11,14 @@
   </div>
 </template>
 <script setup lang="ts">
-import hash from "string-hash";
-import color from "tinycolor2";
+import hash from 'string-hash';
+import color from 'tinycolor2';
 
 const props = defineProps({
-  name: { type: String, required: true, default: "Fatih" },
-  size: { type: String, default: "sm" },
-  status: { type: String, default: "" },
-  url: { type: String, default: "" },
+  name: { type: String, required: true, default: 'Fatih' },
+  size: { type: String, default: 'sm' },
+  status: { type: String, default: '' },
+  url: { type: String, default: '' },
 });
 
 const hashed = hash(props.name);

@@ -22,18 +22,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const textarea = ref<HTMLElement | null>(null);
 
 const props = defineProps({
   label: {
     type: String,
-    default: "",
+    default: '',
   },
   placeholder: {
     type: String,
-    default: "",
+    default: '',
   },
   name: {
     type: String,
@@ -49,23 +49,23 @@ const props = defineProps({
   },
   hint: {
     type: String,
-    default: "",
+    default: '',
   },
   help: {
     type: String,
-    default: "",
+    default: '',
   },
   error: {
     type: String,
-    default: "",
+    default: '',
   },
 });
 
 const resizeChange = () => {
   if (!(textarea.value && props.autoHeight)) return;
 
-  textarea.value.style.height = textarea.value.scrollHeight + 10 + "px";
-  textarea.value.style.height = "auto";
+  textarea.value.style.height = textarea.value.scrollHeight + 10 + 'px';
+  textarea.value.style.height = 'auto';
 };
 </script>
 

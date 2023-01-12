@@ -14,11 +14,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const props = defineProps({
-  size: { type: String, default: "sm" },
-  type: { type: String, default: "primary" },
+  size: { type: String, default: 'sm' },
+  type: { type: String, default: 'primary' },
   dot: { type: Boolean, default: false },
   action: Object,
 });

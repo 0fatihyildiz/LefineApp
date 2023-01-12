@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 defineProps({
-  size: { type: String, default: "sm" },
-  color: { type: String, default: "" },
+  size: { type: String, default: 'sm' },
+  color: { type: String, default: '' },
 });
 </script>
 

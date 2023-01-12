@@ -18,7 +18,7 @@
 defineProps({
   label: {
     type: String,
-    default: "",
+    default: '',
   },
   name: {
     type: String,
@@ -38,10 +38,10 @@ defineProps({
   },
 });
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue']);
 
 const updateValue = (event: Event) => {
-  emit("update:modelValue", (event.target as HTMLInputElement).checked);
+  emit('update:modelValue', (event.target as HTMLInputElement).checked);
 };
 </script>
 

@@ -8,7 +8,7 @@
 .switch {
   @apply relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent bg-zinc-300 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:active:scale-90;
 
-  &.switch[aria-checked="true"] {
+  &.switch[aria-checked='true'] {
     @apply bg-primary;
 
     span {
@@ -27,18 +27,18 @@
 </style>
 
 <script setup lang="ts">
-import { ref, watchEffect } from "vue";
-import { Switch } from "@headlessui/vue";
+import { ref, watchEffect } from 'vue';
+import { Switch } from '@headlessui/vue';
 
 const props = defineProps({
   modelValue: { type: Boolean, default: false },
   disabled: { type: Boolean, default: false },
 });
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue']);
 
 const enabled = ref(false);
 
-watchEffect(() => emit("update:modelValue", enabled.value));
+watchEffect(() => emit('update:modelValue', enabled.value));
 watchEffect(() => (enabled.value = props.modelValue));
 </script>

@@ -6,14 +6,14 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const button = ref<HTMLElement | null>(null);
 const loading = ref(false);
 
 const props = defineProps({
-  size: { type: String, default: "md" },
-  type: { type: String, default: "primary" },
+  size: { type: String, default: 'md' },
+  type: { type: String, default: 'primary' },
   disabled: { type: Boolean, default: false },
 });
 
