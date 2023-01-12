@@ -36,14 +36,16 @@ defineProps({
 
 const emit = defineEmits(["update:modelValue"]);
 
-const updateValue = (e: any) => {
-  emit("update:modelValue", e.target.checked);
+const updateValue = (event: Event) => {
+  const checkbox = event.target as HTMLInputElement;
+  const value = checkbox.checked;
+  emit("update:modelValue", value);
 };
 </script>
 
 <style lang="postcss" scoped>
 .checkbox {
-  @apply flex items-center gap-2 select-none;
+  @apply flex select-none items-center gap-2;
 
   &.disabled {
     @apply cursor-not-allowed opacity-50;
