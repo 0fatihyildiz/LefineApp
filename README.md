@@ -1,6 +1,6 @@
 # Lefine
 
-Web application for stream and view videos with ur friends.
+Web application for stream and view videos with your friends.
 
 ## Folder Structure
 
@@ -10,15 +10,14 @@ Web application for stream and view videos with ur friends.
 │   ├── components # Reusable components
 │   ├── router  # Vue Router configuration
 │   ├── stores # Pinia stores
-│   ├── types # Pinia stores
-│   ├── utils # Pinia stores
+│   ├── types # TypeScript types
+│   ├── utils # functions that are common, helpers, etc.
 │   └── views # Pages
-│       └── auth
-│          └── store
-│          └── router
-│          └── compositions/composables
-│          └── types
-│       └── dashboard
+│       └── auth # a page
+│          └── store # store for this page logic
+│          └── router # router
+│          └── compositions/composables 
+│          └── types 
 └── main.ts # Project entry point
 ```
 
