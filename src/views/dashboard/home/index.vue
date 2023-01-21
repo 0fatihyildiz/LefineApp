@@ -1,3 +1,3 @@
 <template>
-  <div class="text-3xl">asdasd</div>
+  <div class="bg-red-500 text-3xl">Asdasd</div>
 </template>

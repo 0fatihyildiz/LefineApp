@@ -22,12 +22,7 @@ module.exports = {
     'tailwindcss/no-contradicting-classname': 'error',
   },
   plugins: ['tailwindcss'],
-  overrides: [
-    {
-      files: ['cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}'],
-      extends: ['plugin:cypress/recommended'],
-    },
-  ],
+  ignorePatterns: ['**/*.css'],
   parserOptions: {
     ecmaVersion: 'latest',
   },
