@@ -14,9 +14,9 @@ Web application for stream and view videos with your friends.
 │   ├── utils # functions that are common, helpers, etc.
 │   └── views # Pages
 │       └── auth # a page
-│          └── store # store for this page logic
-│          └── router # router
-│          └── compositions/composables 
+│          ├── store # store for this page logic
+│          ├── router # router
+│          ├── compositions/composables 
 │          └── types 
 └── main.ts # Project entry point
 ```
@@ -24,37 +24,37 @@ Web application for stream and view videos with your friends.
 ## Project Setup
 
 ```sh
-yarn install
+pnpm install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 ### Run Tests On Watch Mode
 
 ```sh
-yarn test
+pnpm test
 ```
 
 ### Type-Check, Compile and Minify for Production
 
 ```sh
-yarn build
+pnpm build
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-yarn lint
+pnpm lint
 ```
 
 ### Format with [Prettier](https://prettier.io/)
 
 ```sh
-yarn format
+pnpm format
 ```
 
 <!-- # Lefine
