@@ -3,11 +3,11 @@ import HomeRouter from '@/views/dashboard/home/router';
 
 const routes: any = [
   {
-    path: '/private',
+    path: '/auth',
     // auth
   },
   {
-    path: '/public',
+    path: '/',
     redirect: {
       name: 'Home',
     },
