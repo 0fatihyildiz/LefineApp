@@ -3,9 +3,9 @@
     ref="button"
     :class="['button', size, variant]"
     :disabled="disabled"
-    :type="type as any"
+    :type="type"
   >
-    <loadingApp :size="size" v-if="loading" />
+    <BaseSpinner :size="size" v-if="loading" />
     <slot v-else />
   </button>
 </template>
@@ -47,7 +47,7 @@ defineExpose({
 
 <style lang="postcss" scoped>
 .button {
-  @apply inline-flex items-center justify-center rounded-xl border border-transparent font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-90 disabled:cursor-not-allowed disabled:opacity-75 disabled:active:scale-100;
+  @apply inline-flex items-center justify-center rounded-md border border-transparent font-semibold transition-all focus:outline-none focus:ring-offset-black focus:ring-2 focus:ring-offset-2 active:scale-90 disabled:cursor-not-allowed disabled:opacity-75 disabled:active:scale-100;
 
   &.sm {
     @apply px-2.5 py-2 text-xs;
@@ -66,11 +66,11 @@ defineExpose({
   }
 
   &.secondary {
-    @apply bg-primary/20 text-primary shadow-sm hover:bg-primary/30 focus:ring-primary/20;
+    @apply bg-primary/20 text-white/80 shadow-sm hover:bg-primary/30 focus:ring-primary/20;
   }
 
   &.constract {
-    @apply border border-black/10 bg-white text-black shadow-sm hover:opacity-80 focus:ring-black/10;
+    @apply border border-black/10 bg-white/20 text-white shadow-sm hover:opacity-80 focus:ring-black/10;
   }
 }
 </style>

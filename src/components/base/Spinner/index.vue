@@ -19,76 +19,76 @@ defineProps({
     @apply absolute inset-0 m-auto block h-8 w-8;
     animation: loading-2 1.2s linear infinite;
 
-    & ::after {
+    &::after {
       @apply absolute inset-0 m-auto h-8 w-8 rounded-full border-[3px] border-[v-bind(color)] content-[''];
       animation: loading-3 1.2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
     }
   }
 
-  & .xs {
+  &.xs {
     @apply h-3 w-3;
 
     .load {
       @apply h-3 w-3;
       clip: rect(0, 12px, 12px, 6px);
 
-      & ::after {
+      &::after {
         @apply h-3 w-3 border-2;
         clip: rect(0, 12px, 12px, 6px);
       }
     }
   }
 
-  & .sm {
+  &.sm {
     @apply h-4 w-4;
 
     .load {
       @apply h-4 w-4;
       clip: rect(0, 16px, 16px, 8px);
 
-      & ::after {
+      &::after {
         @apply h-4 w-4 border-2;
         clip: rect(0, 16px, 16px, 8px);
       }
     }
   }
 
-  & .md {
+  &.md {
     @apply h-5 w-5;
 
     .load {
       @apply h-5 w-5;
       clip: rect(0, 20px, 20px, 10px);
 
-      & ::after {
+      &::after {
         @apply h-5 w-5 border-2;
         clip: rect(0, 20px, 20px, 10px);
       }
     }
   }
 
-  & .lg {
+  &.lg {
     @apply h-6 w-6;
 
     .load {
       @apply h-6 w-6;
       clip: rect(0, 24px, 24px, 12px);
 
-      & ::after {
+      &::after {
         @apply h-6 w-6 border-[3px];
         clip: rect(0, 24px, 24px, 12px);
       }
     }
   }
 
-  & .xl {
+  &.xl {
     @apply h-7 w-7;
 
     .load {
       @apply h-7 w-7;
       clip: rect(0, 28px, 28px, 14px);
 
-      & ::after {
+      &::after {
         @apply h-7 w-7 border-[3px];
         clip: rect(0, 28px, 28px, 14px);
       }

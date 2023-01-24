@@ -1,34 +1,65 @@
+@import './fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply text-4xl font-bold;
-}
-h2 {
-  @apply text-3xl font-bold;
-}
-h3 {
-  @apply text-2xl font-bold;
-}
-h4 {
-  @apply text-xl font-bold;
-}
+@layer base {
+  * {
+    @apply text-white font-Satoshi;
+  }
 
-input[type='radio'],
-input[type='checkbox'] {
-  @apply rounded-md border !border-zinc-300 border-transparent text-primary shadow-sm focus:ring-primary disabled:cursor-not-allowed disabled:opacity-50;
-}
+  html,
+  body {
+    @apply w-full h-full;
+  }
 
-input[type='radio'],
-input[type='checkbox']:checked {
-  @apply !border-transparent;
-}
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
 
-input[type='radio'] {
-  @apply rounded-full;
-}
+  a{
+    @apply text-secondary text-xs hover:underline;
+  }
 
-label {
-  @apply block text-sm font-semibold text-zinc-700;
+  input[type='radio'],
+  input[type='checkbox'] {
+    @apply cursor-pointer rounded-md border bg-white/20 border-transparent text-primary shadow-sm focus:ring-primary focus:ring-offset-black disabled:cursor-not-allowed disabled:opacity-50;
+
+    &:checked {
+      @apply !border-transparent;
+    }
+  }
+
+  input[type='radio'] {
+    @apply rounded-full;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    @apply ring-1 ring-primary !bg-white/20 font-Satoshi text-xs;
+    -webkit-text-fill-color: rgba(255,255,255, 0.7);
+    accent-color: white;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  label {
+    @apply block text-sm font-semibold text-zinc-700;
+  }
 }
