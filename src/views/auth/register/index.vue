@@ -44,7 +44,7 @@
             </clipPath>
           </defs>
         </svg>
-        Sign in with Google
+        Sign Up with Google
       </BaseButton>
       <p class="text-sm font-medium text-zinc-500">Or</p>
       <div class="form">
@@ -69,7 +69,13 @@
       </div>
       <div class="actions">
         <BaseButton size="sm">Register</BaseButton>
-        <BaseButton size="sm" variant="secondary">Login</BaseButton>
+        <BaseButton
+          size="sm"
+          variant="secondary"
+          @click="router.push('/login')"
+        >
+          Login
+        </BaseButton>
       </div>
     </form>
   </div>
@@ -78,7 +84,9 @@
 <script lang="ts" setup>
 import { reactive } from 'vue';
 import { UserIcon } from '@heroicons/vue/20/solid';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const register = reactive({
   username: '',
   password: '',

@@ -7,7 +7,16 @@
       <div class="mx-auto w-full max-w-xs">
         <BaseLogo />
       </div>
-      <RouterView />
+      <router-view v-slot="{ Component }">
+        <transition
+          @enter="useSlideIn"
+          @leave="useSlideOut"
+          v-bind:css="false"
+          mode="out-in"
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
@@ -15,6 +24,7 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router';
+import { useSlideIn, useSlideOut } from '../utils/anime'; // TODO: this should be fix
 import anime from 'animejs';
 
 onMounted(() => {

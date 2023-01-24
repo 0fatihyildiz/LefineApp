@@ -67,7 +67,13 @@
       </div>
       <div class="actions">
         <BaseButton size="sm" ref="button" @click="test">Login</BaseButton>
-        <BaseButton size="sm" variant="secondary">Register</BaseButton>
+        <BaseButton
+          size="sm"
+          variant="secondary"
+          @click="router.push('/register')"
+        >
+          Register
+        </BaseButton>
       </div>
     </form>
   </div>
@@ -75,7 +81,10 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { UserIcon } from '@heroicons/vue/20/solid';
+
+const router = useRouter();
 
 const login = reactive({
   username: '',
@@ -83,7 +92,7 @@ const login = reactive({
   remember: false,
 });
 
-const button = ref(null);
+const button = ref<any>(null);
 
 const test = (): void => {
   button.value?.setLoad(true);
