@@ -17,7 +17,6 @@ declare module '@vue/runtime-core' {
     BaseFormToggle: typeof import('./src/components/base/Form/Toggle/index.vue')['default']
     BaseLogo: typeof import('./src/components/base/Logo/index.vue')['default']
     BaseSpinner: typeof import('./src/components/base/Spinner/index.vue')['default']
-    IconsUser: typeof import('./src/components/icons/user.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
