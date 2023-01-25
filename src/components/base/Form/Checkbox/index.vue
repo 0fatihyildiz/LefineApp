@@ -47,6 +47,10 @@ const updateValue = (event: Event) => {
 .checkbox {
   @apply flex select-none items-center gap-2;
 
+  label {
+    @apply cursor-pointer text-white/50 text-xs;
+  }
+
   &.disabled {
     @apply cursor-not-allowed opacity-50;
 

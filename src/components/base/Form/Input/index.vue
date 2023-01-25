@@ -7,11 +7,11 @@
       props.type,
     ]"
   >
-    <div class="flex justify-between" v-if="label || hint">
+    <div class="mb-1 flex justify-between" v-if="label || hint">
       <label :for="name">{{ label }}</label>
       <span class="hint">{{ hint }}</span>
     </div>
-    <div class="relative mt-1 rounded-md shadow-sm">
+    <div class="relative rounded-md shadow-sm">
       <input
         :id="name"
         :name="name"
@@ -24,9 +24,7 @@
       <div class="icon" @click="togglePassword">
         <component
           :is="
-            error
-              ? ExclamationCircleIcon
-              : props.type !== 'password'
+            props.type !== 'password'
               ? icon?.icon
               : passwordShow
               ? EyeIcon
@@ -43,11 +41,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import {
-  ExclamationCircleIcon,
-  EyeIcon,
-  EyeSlashIcon,
-} from '@heroicons/vue/20/solid';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/vue/20/solid';
 
 const props = defineProps({
   label: { type: String, default: '' },
@@ -80,6 +74,8 @@ const updateValue = (event: Event) =>
 
 <style lang="postcss" scoped>
 .input {
+  @apply rounded-md;
+
   label {
     @apply block text-sm font-medium capitalize text-zinc-700;
   }
@@ -89,14 +85,14 @@ const updateValue = (event: Event) =>
   }
 
   input {
-    @apply block w-full rounded-md border-transparent bg-gray-200/70 py-2.5 text-sm font-medium focus:border-primary focus:bg-transparent focus:ring-primary disabled:cursor-not-allowed disabled:border-zinc-200 disabled:bg-zinc-50 disabled:text-zinc-500 sm:text-xs;
+    @apply block font-medium w-full rounded-md overflow-hidden border-transparent bg-white/10 py-2.5 text-sm placeholder:text-white/50 focus:border-primary focus:bg-transparent focus:ring-primary disabled:cursor-not-allowed disabled:border-zinc-200/20 disabled:bg-zinc-50/20 disabled:text-zinc-100/50 sm:text-xs;
   }
 
   .icon {
-    @apply absolute inset-y-0 right-0 flex items-center pr-3;
+    @apply absolute opacity-50 inset-y-0 right-0 flex items-center pr-3;
 
     svg {
-      @apply h-5 w-5 text-zinc-400;
+      @apply h-5 w-5;
     }
   }
 
@@ -104,35 +100,35 @@ const updateValue = (event: Event) =>
     @apply mt-1 select-none text-xs capitalize text-zinc-500;
   }
 
-  & .error {
+  &.error {
     input {
-      @apply border-rose-300 pl-2 pr-10 text-rose-900 placeholder-rose-300 focus:border-rose-500 focus:outline-none focus:ring-rose-500;
+      @apply ring-1 border border-rose-500/50 ring-rose-500/50 pl-2 pr-10 bg-rose-500/10 text-rose-400 placeholder-rose-500 focus:outline-none;
     }
 
     .message {
-      @apply text-rose-600;
+      @apply text-rose-600 font-medium;
     }
 
     .icon {
-      @apply pointer-events-none !important;
+      @apply text-rose-400 !important;
 
       svg {
-        @apply h-5 w-5 text-rose-400;
+        @apply h-5 w-5;
       }
     }
   }
 
-  & .password {
+  &.password {
     input {
       @apply pr-10;
     }
 
     .icon {
-      @apply pointer-events-auto absolute inset-y-0 right-0 flex cursor-pointer items-center pr-3 transition-transform hover:opacity-70 active:scale-90 !important;
+      @apply cursor-pointer pointer-events-auto absolute inset-y-0 right-0 flex items-center pr-3 transition-transform opacity-70 hover:opacity-50 active:scale-90 !important;
     }
   }
 
-  & .left {
+  &.left {
     input {
       @apply pr-2 pl-10;
     }
@@ -142,7 +138,7 @@ const updateValue = (event: Event) =>
     }
   }
 
-  & .right {
+  &.right {
     input {
       @apply pr-10 pl-2;
     }
