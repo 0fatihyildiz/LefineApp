@@ -33,7 +33,6 @@ specifiers:
   eslint-plugin-storybook: ^0.6.8
   eslint-plugin-tailwindcss: ^3.8.0
   eslint-plugin-vue: ^9.3.0
-  git-cz: ^4.9.0
   husky: ^8.0.0
   jsdom: ^20.0.3
   lint-staged: ^13.1.0
@@ -102,7 +101,6 @@ devDependencies:
   eslint: 8.32.0
   eslint-plugin-storybook: 0.6.10_oz6z67amphy2h47f67wll6poxm
   eslint-plugin-vue: 9.9.0_eslint@8.32.0
-  git-cz: 4.9.0
   husky: 8.0.3
   jsdom: 20.0.3
   lint-staged: 13.1.0
@@ -7831,11 +7829,6 @@ packages:
   /get-value/2.0.6:
     resolution: {integrity: sha512-Ln0UQDlxH1BapMu3GPtf7CuYNwRZf2gwCuPqbyG6pB8WfmFpzqcy4xtAaAMUhnNqjMKTiCPZG2oMT3YSx8U2NA==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /git-cz/4.9.0:
-    resolution: {integrity: sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==}
-    hasBin: true
     dev: true
 
   /github-slugger/1.5.0:

@@ -2,14 +2,9 @@
   "name": "lefine",
   "version": "0.0.0",
   "private": true,
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
+    "build": "run-p build-only",
     "preview": "vite preview",
     "format": "prettier --write",
     "test": "vitest --watch",
@@ -19,7 +14,6 @@
     "lint": "eslint ./ --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "cmt": "git-cz --disable-emoji",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -68,7 +62,6 @@
     "eslint": "^8.22.0",
     "eslint-plugin-storybook": "^0.6.8",
     "eslint-plugin-vue": "^9.3.0",
-    "git-cz": "^4.9.0",
     "husky": "^8.0.0",
     "jsdom": "^20.0.3",
     "lint-staged": "^13.1.0",
