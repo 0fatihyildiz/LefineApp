@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "run-p build-only",
+    "build": "run-p type-check build-only",
     "preview": "vite preview",
     "format": "prettier --write",
     "test": "vitest --watch",
